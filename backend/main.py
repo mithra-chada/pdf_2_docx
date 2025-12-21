@@ -60,7 +60,7 @@ async def get_status(task_id: str):
     if task_id not in tasks:
         raise HTTPException(status_code=404, detail="Task not found")
     return tasks[task_id]
-
+# code by mithra chada
 @app.get("/download/{task_id}")
 async def download_file(task_id: str):
     file_path = PROCESSED_DIR / f"{task_id}.docx"
